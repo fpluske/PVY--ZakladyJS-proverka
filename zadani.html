@@ -399,6 +399,13 @@
           </div>
           <script>
             <!-- Zadejte JS kód -->
+            function vypisDatuCas() {
+              const d = new Date();
+              let datum = `${d.getDate()}. ${d.getMonth() + 1}. ${d.getFullYear()}`;
+              let cas = `${d.getHours()}:${d.getMinutes() > 9 ? d.getMinutes() : '0' + d.getMinutes()}:${d.getSeconds() > 9 ? d.getSeconds() : '0' + d.getSeconds()}`;
+              return datum + " " + cas;
+            }
+            console.log(vypisDatuCas());
           </script>
         </div>
         <div class="col-sm-6 bg-secondary text-light p-5">
