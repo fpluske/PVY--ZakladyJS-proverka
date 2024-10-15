@@ -216,11 +216,11 @@
             <p>Zde bude řešení.</p>
           </div>
           <script>
-            let jmeno = "Matyáš",
-                prijmeni = "Fiala";
+            let jmeno = "František",
+                prijmeni = "Pluške";
             const pozdrav = "Ahoj";
-            let vaha = 72,     //kg
-                vyska = 178;   //cm
+            let vaha = 87,     //kg
+                vyska = 182;   //cm
 
             let vystup = "<li>" + pozdrav + " tady " + jmeno + " " + prijmeni + "</li>";
             vystup += `<li> Váha = ${vaha} kg a výška = ${vyska} cm </li>`;
@@ -357,6 +357,19 @@
           </div>
           <script>
             <!-- Zadejte JS kód -->
+            function prestupneRoky(min = 1897, max = 2024){
+              let vystup = "<ul> \n";
+              
+              for (let y = min; y <= max; y++){ //inkrementace je ++, dekrementace je --
+                if (y % 4 === 0 && y % 100 != 0 || y % 400 === 0) {
+                  vystup += `\t <li> ${y} </li> \n`;
+                }
+              }
+              vystup += "</ul>";
+              return vystup;
+            }
+            console.log(prestupneRoky());
+            document.getElementById("jedenacty").innerHTML = prestupneRoky();
           </script>
         </div>
         <div class="col-sm-6 bg-secondary text-light p-5">
